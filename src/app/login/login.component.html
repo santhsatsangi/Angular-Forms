@@ -1,0 +1,19 @@
+<div class="container mt-3">
+ <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="row card card-body w-50 rounded-0">
+  <h3>Login </h3>
+  <div class="mb-3">
+    <label for="Email" class="form-label">Email</label>
+    <input type="email" class="form-control rounded-0" formControlName="userName"  placeholder="Enter Your Email">
+  </div>
+  <div class="mb-3">
+    <label for="password" class="form-label">Password</label>
+    <input type="password" class="form-control rounded-0" formControlName="password" placeholder="Enter your password">
+  </div>
+  <div class="mb-3">
+    <input type="submit" class="btn btn-success" value="Submit">
+  </div>
+ </form>
+</div>
+
+{{loginForm.value| json}}
+
